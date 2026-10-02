@@ -1118,6 +1118,10 @@ input:focus,select:focus,textarea:focus {
   border-radius:50%;
   margin-top:27px;
   margin-left:auto;
+  padding:0;
+  color:inherit;
+  background:transparent;
+  cursor:pointer;
 }
 .footer-bottom {
   border-top:1px solid #244154;
@@ -3391,9 +3395,6 @@ body.js-reveal-ready [data-reveal="card"] {
 }
 
 @media(prefers-reduced-motion:reduce) {
-  html {
-    scroll-behavior:auto;
-  }
   .hero-photo,
   .dark-section::after {
     animation:none!important;

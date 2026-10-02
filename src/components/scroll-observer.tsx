@@ -67,6 +67,7 @@ export default function ScrollObserver() {
         let lastScrollY = window.scrollY;
         let scrollFrame = 0;
         let initialiseFrame = 0;
+        let scrollToTopFrame = 0;
 
         const updateScrollDirection = () => {
             if (scrollFrame) return;
@@ -84,6 +85,31 @@ export default function ScrollObserver() {
             element.classList.toggle('reveal-from-top', side === 'up');
             element.classList.toggle('reveal-from-bottom', side === 'down');
         };
+
+        const scrollToTop = () => {
+            window.cancelAnimationFrame(scrollToTopFrame);
+            const startY = window.scrollY;
+            if (startY <= 0) return;
+
+            // Keep the journey perceptible on long pages while avoiding an
+            // excessively slow return on shorter ones.
+            const duration = Math.min(2200, Math.max(1100, startY * 0.45));
+            const startedAt = performance.now();
+            const easeInOutCubic = (progress: number) => progress < 0.5
+                ? 4 * progress * progress * progress
+                : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+            const step = (now: number) => {
+                const progress = Math.min((now - startedAt) / duration, 1);
+                window.scrollTo(0, Math.round(startY * (1 - easeInOutCubic(progress))));
+                if (progress < 1) scrollToTopFrame = window.requestAnimationFrame(step);
+            };
+
+            scrollToTopFrame = window.requestAnimationFrame(step);
+        };
+
+        const backToTop = document.querySelector<HTMLButtonElement>('.back-top');
+        backToTop?.addEventListener('click', scrollToTop);
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -147,7 +173,9 @@ export default function ScrollObserver() {
         return () => {
             window.cancelAnimationFrame(initialiseFrame);
             window.cancelAnimationFrame(scrollFrame);
+            window.cancelAnimationFrame(scrollToTopFrame);
             window.removeEventListener('scroll', updateScrollDirection);
+            backToTop?.removeEventListener('click', scrollToTop);
             observer.disconnect();
             elements.forEach((element) => {
                 element.classList.remove('in-view', 'reveal-from-top', 'reveal-from-bottom');

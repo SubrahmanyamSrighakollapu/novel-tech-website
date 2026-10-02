@@ -177,9 +177,9 @@ export function Footer() {
     <Icon name="mail" size={18}/>{site.email}</a>
     <a href={'tel:' + site.phoneLink}>
     <Icon name="call" size={18}/>{site.phone}</a>
-    <a className="back-top" href="#top" aria-label="Back to top">
+    <button className="back-top" type="button" aria-label="Back to top">
     <Icon name="up" size={18}/>
-    </a>
+    </button>
     </div>
     </div>
     <div className="footer-bottom">
