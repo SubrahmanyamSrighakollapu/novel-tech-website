@@ -1,135 +1,160 @@
 'use client';
+
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+
+const REVEAL_SELECTORS = [
+    '.heading',
+    '.feature',
+    '.service-card',
+    '.process > li',
+    '.split > div',
+    '.testimonial-grid > div',
+    '.story-collage',
+    '.faq-list > details',
+    '.panel',
+    '.contact-detail',
+    '.visit-grid > div',
+    '.career-values > div',
+    '.hiring-grid > div',
+    '.cta-inner > div',
+    '.partner-grid > div',
+    '.industry-grid > div',
+    '.tech-chip',
+    '.values-copy',
+    '.career-cta .wrap > div',
+    '[data-reveal]'
+];
+
+const CARD_SELECTOR = [
+    '.feature',
+    '.service-card',
+    '.process > li',
+    '.industry-grid > div',
+    '.contact-detail',
+    '.faq-list > details',
+    '.tech-chip'
+].join(', ');
+
+const STAGGERED_PARENT_CLASSES = new Set([
+    'strengths',
+    'service-grid',
+    'values-grid',
+    'feature-grid',
+    'industry-grid',
+    'process',
+    'faq-list'
+]);
+
+type ScrollDirection = 'up' | 'down';
 
 export default function ScrollObserver() {
     const pathname = usePathname();
 
     useEffect(() => {
-        const selectors = [
-            '.heading',
-            '.feature',
-            '.service-card',
-            '.process > li',
-            '.split > div',
-            '.values-grid > div',
-            '.strengths > div',
-            '.expertise-grid > div',
-            '.testimonial-grid > div',
-            '.story-collage',
-            '.compact-services',
-            '.faq-list > details',
-            '.panel',
-            '.contact-detail',
-            '.visit-grid > div',
-            '.career-values > div',
-            '.hiring-grid > div',
-            '.cta',
-            '.partner-grid > div',
-            '.industry-grid > div',
-            '.tech-chip',
-            '.hero-copy > .eyebrow',
-            '.hero-copy > p',
-            '.hero-copy > .button-row',
-            '.hero-features > div',
-            '.hero-principles > div',
-            '.values-copy',
-            '.career-cta .wrap > div',
-            '[data-reveal]'
-        ];
-
-        const elements = Array.from(document.querySelectorAll<HTMLElement>(selectors.join(', ')));
-        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        let frame = 0;
-        let lastScrollY = window.scrollY;
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                const scrollingDown = window.scrollY >= lastScrollY;
-                lastScrollY = window.scrollY;
-
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        // Content entering from below moves up; content re-entering
-                        // from above moves down. Explicit zoom/fade reveals are kept.
-                        const element = entry.target as HTMLElement;
-                        const reveal = element.dataset.reveal;
-                        if (reveal === 'up' || reveal === 'down') {
-                            element.dataset.reveal = scrollingDown ? 'up' : 'down';
-                        }
-                        entry.target.classList.add('in-view');
-                    } else {
-                        // Re-arm after it has fully left the viewport so the reveal
-                        // also runs when the user reverses their scroll direction.
-                        entry.target.classList.remove('in-view');
-                    }
-                });
-            },
-            {
-                threshold: 0,
-                rootMargin: '-24px 0px -24px 0px',
-            }
+        const allMatches = Array.from(
+            document.querySelectorAll<HTMLElement>(REVEAL_SELECTORS.join(', '))
         );
 
-        elements.forEach((el) => {
-            if (!el.hasAttribute('data-reveal')) {
-                const isCard = el.matches([
-                    '.feature',
-                    '.service-card',
-                    '.process > li',
-                    '.industry-grid > div',
-                    '.hero-features > div',
-                    '.hero-principles > div',
-                    '.contact-detail',
-                    '.faq-list > details',
-                    '.tech-chip'
-                ].join(', '));
-                const parentIndex = el.parentElement
-                    ? Array.from(el.parentElement.children).indexOf(el)
-                    : 0;
+        // Never animate a container and its animated descendants together. Nested
+        // transforms were compounding and made entire grids appear to flash/jump.
+        const elements = allMatches.filter((element) =>
+            !allMatches.some((candidate) => candidate !== element && element.contains(candidate))
+        );
+        const generatedRevealAttributes = new Set<HTMLElement>();
 
-                if (isCard) {
-                    el.setAttribute('data-reveal', 'card');
-                } else if (el.classList.contains('eyebrow') || el.classList.contains('mega-eyebrow')) {
-                    el.setAttribute('data-reveal', 'down');
-                } else if (el.classList.contains('story-collage') || el.classList.contains('glass-quote') || el.classList.contains('rounded-photo')) {
-                    el.setAttribute('data-reveal', 'zoom');
-                } else if (el.matches('.heading, .values-copy, .hero-copy > p, .hero-copy > .button-row')) {
-                    el.setAttribute('data-reveal', 'left');
-                } else {
-                    el.setAttribute('data-reveal', parentIndex % 2 === 0 ? 'left' : 'right');
-                }
-            }
+        let direction: ScrollDirection = 'down';
+        let lastScrollY = window.scrollY;
+        let scrollFrame = 0;
+        let initialiseFrame = 0;
 
-            // Calculate stagger delay for items inside grids
-            const parent = el.parentElement;
-            if (parent) {
-                const staggeredParents = ['strengths', 'service-grid', 'values-grid', 'feature-grid', 'services-mega-grid', 'industry-grid', 'compact-services', 'process', 'hero-features', 'hero-principles', 'faq-list'];
-                if (staggeredParents.some(c => parent.classList.contains(c))) {
-                    const siblings = Array.from(parent.children);
-                    const sibIndex = siblings.indexOf(el);
-                    el.style.setProperty('--stagger-delay', `${(sibIndex % 8) * 90}ms`);
+        const updateScrollDirection = () => {
+            if (scrollFrame) return;
+            scrollFrame = window.requestAnimationFrame(() => {
+                const currentScrollY = window.scrollY;
+                if (Math.abs(currentScrollY - lastScrollY) > 2) {
+                    direction = currentScrollY > lastScrollY ? 'down' : 'up';
+                    lastScrollY = currentScrollY;
                 }
-            }
+                scrollFrame = 0;
+            });
+        };
+
+        const setEntrySide = (element: HTMLElement, side: ScrollDirection) => {
+            element.classList.toggle('reveal-from-top', side === 'up');
+            element.classList.toggle('reveal-from-bottom', side === 'down');
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                const element = entry.target as HTMLElement;
+
+                if (entry.isIntersecting) {
+                    setEntrySide(element, direction);
+                    element.classList.add('in-view');
+                    return;
+                }
+
+                // Reset instantly only after the target is outside the viewport.
+                // Its geometric position determines the correct side for re-entry.
+                const rootTop = entry.rootBounds?.top ?? 0;
+                const rootBottom = entry.rootBounds?.bottom ?? window.innerHeight;
+                const side: ScrollDirection = entry.boundingClientRect.bottom <= rootTop
+                    ? 'up'
+                    : entry.boundingClientRect.top >= rootBottom
+                        ? 'down'
+                        : direction;
+                setEntrySide(element, side);
+                element.classList.remove('in-view');
+            });
+        }, {
+            threshold: 0.08,
+            rootMargin: '-4% 0px -8% 0px'
         });
 
-        // Apply the hidden starting state for one paint before revealing items.
-        // Without this frame boundary, above-the-fold elements skip the transition.
-        document.body.classList.add('js-reveal-ready');
-        frame = window.requestAnimationFrame(() => {
-            if (reducedMotion) {
-                elements.forEach((el) => el.classList.add('in-view'));
-                return;
+        elements.forEach((element) => {
+            if (!element.hasAttribute('data-reveal')) {
+                generatedRevealAttributes.add(element);
+                const parentIndex = element.parentElement
+                    ? Array.from(element.parentElement.children).indexOf(element)
+                    : 0;
+
+                if (element.matches(CARD_SELECTOR)) {
+                    element.dataset.reveal = 'card';
+                } else if (element.matches('.story-collage, .glass-quote, .rounded-photo')) {
+                    element.dataset.reveal = 'zoom';
+                } else {
+                    element.dataset.reveal = parentIndex % 2 === 0 ? 'left' : 'right';
+                }
             }
-            elements.forEach((el) => observer.observe(el));
+
+            const parent = element.parentElement;
+            if (parent && [...STAGGERED_PARENT_CLASSES].some((name) => parent.classList.contains(name))) {
+                const siblingIndex = Array.from(parent.children).indexOf(element);
+                element.style.setProperty('--stagger-delay', `${Math.min(siblingIndex, 5) * 70}ms`);
+            }
+
+            const rect = element.getBoundingClientRect();
+            setEntrySide(element, rect.bottom < 0 ? 'up' : 'down');
+        });
+
+        document.body.classList.add('js-reveal-ready');
+        window.addEventListener('scroll', updateScrollDirection, { passive: true });
+        initialiseFrame = window.requestAnimationFrame(() => {
+            elements.forEach((element) => observer.observe(element));
         });
 
         return () => {
-            window.cancelAnimationFrame(frame);
+            window.cancelAnimationFrame(initialiseFrame);
+            window.cancelAnimationFrame(scrollFrame);
+            window.removeEventListener('scroll', updateScrollDirection);
             observer.disconnect();
-            elements.forEach((el) => {
-                el.classList.remove('in-view');
-                el.style.removeProperty('--stagger-delay');
+            elements.forEach((element) => {
+                element.classList.remove('in-view', 'reveal-from-top', 'reveal-from-bottom');
+                element.style.removeProperty('--stagger-delay');
+                if (generatedRevealAttributes.has(element)) {
+                    element.removeAttribute('data-reveal');
+                }
             });
             document.body.classList.remove('js-reveal-ready');
         };
