@@ -48,6 +48,11 @@ export default function Header() {
         return () => document.removeEventListener('keydown', close);
     }, []);
 
+    useEffect(() => {
+        document.body.classList.toggle('menu-open', open);
+        return () => document.body.classList.remove('menu-open');
+    }, [open]);
+
     const handleMouseEnter = () => {
         if (typeof window !== 'undefined' && window.innerWidth > 900) {
             if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
@@ -133,4 +138,3 @@ export default function Header() {
     </div>
     </header>;
 }
-
