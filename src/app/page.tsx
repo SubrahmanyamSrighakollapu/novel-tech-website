@@ -6,7 +6,7 @@ export const metadata = seo('Digital Solutions for Your Business', 'Websites, mo
 export default function Home() {
     return <>
     <Hero home eyebrow="Ideas today. A brighter tomorrow." lines={['Building', 'What’s Next', 'Together.']} text="We partner with businesses to design, develop and deliver technology solutions that drive growth and create lasting impact." image="home-hero" primary="Start Your Project" secondary="Our Story"/>
-    <section className="section">
+    <section className="section" id="home-content">
     <div className="wrap">
     <Heading eyebrow="Why choose Noveltech" title="More Than a Tech Company" accent="A Growth Partner" text="We combine creativity, technology and strategy to deliver solutions that create real business value."/>
     <div className="strengths">{strengths.map((s, i) => <Feature {...s} index={i} key={s.title}/>)}</div>

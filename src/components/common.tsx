@@ -72,6 +72,16 @@ export function Hero({ eyebrow, lines, text, image, primary = 'Get in Touch', hr
     return <section className={'hero ' + (home ? 'home-hero' : '')}>
     <Photo name={image} alt="" priority className="hero-photo"/>
     <div className="hero-shade"/>
+    {home && <div className="hero-effects" aria-hidden="true">
+        <div className="hero-tech-grid"/>
+        <div className="hero-aurora hero-aurora-one"/>
+        <div className="hero-aurora hero-aurora-two"/>
+        <div className="hero-scan-line"/>
+        <span className="hero-particle particle-one"/>
+        <span className="hero-particle particle-two"/>
+        <span className="hero-particle particle-three"/>
+        <span className="hero-particle particle-four"/>
+    </div>}
     <div className="wrap hero-inner">{breadcrumb && <nav className="breadcrumbs" aria-label="Breadcrumb">
         <Link href="/">Home</Link>
         <span>›</span>
@@ -89,7 +99,7 @@ export function Hero({ eyebrow, lines, text, image, primary = 'Get in Touch', hr
             </span>
             <p>{f.text}</p>
             </div>)}</div>}</div>
-    </div>{home && <div className="hero-principles wrap">{[['People', 'First in every decision'], ['Ideas', 'Built around your goals'], ['Technology', 'Made for real work'], ['Impact', 'Beyond the launch']].map(([a, b]) => <div key={a}>
+    </div>{home && <a className="hero-scroll-cue" href="#home-content"><span>Scroll to explore</span><i aria-hidden="true"/></a>}{home && <div className="hero-principles wrap">{[['People', 'First in every decision'], ['Ideas', 'Built around your goals'], ['Technology', 'Made for real work'], ['Impact', 'Beyond the launch']].map(([a, b]) => <div key={a}>
             <strong>{a}</strong>
             <span>{b}</span>
             </div>)}</div>}</section>;
