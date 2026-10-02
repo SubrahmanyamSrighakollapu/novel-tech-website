@@ -1,0 +1,77 @@
+[
+  {
+    "name": "home-hero",
+    "ref": "home",
+    "prompt": "Use case: photorealistic-natural. Input image is composition and style reference screenshot, NOT output layout. Recreate closely ONLY the top hero's architectural background scene: enormous glossy sculptural blue/cyan/green ribbon shaped capital N in the right two thirds of a glass highrise office, dusk city skyscrapers beyond. Meeting through inner arch and black lounge furniture lower right. Leave left third deep navy empty negative space. Output a clean standalone high-resolution image asset, not a webpage screenshot. Wide landscape 16:9, navy/cyan palette, premium photorealistic detail. Remove all overlay words, headlines, navigation, buttons, cards, icons, captions, and website UI. Do not include any page sections or borders. Retain only specifically requested physical brand signage. No watermark."
+  },
+  {
+    "name": "about-hero",
+    "ref": "about",
+    "prompt": "Use case: photorealistic-natural. Input image is composition and style reference screenshot, NOT output layout. Recreate closely ONLY the top hero background scene: cinematic glass office corridor, colleagues blurred center, illuminated cyan blue ribbon N sculpture wall logo at right with physical white Noveltech sign below, warm ceiling spots, plants. Left 45 percent dark navy negative space. Output a clean standalone high-resolution image asset, not a webpage screenshot. Wide landscape 16:9, navy/cyan palette, premium photorealistic detail. Remove all overlay words, headlines, navigation, buttons, cards, icons, captions, and website UI. Do not include any page sections or borders. Retain only specifically requested physical brand signage. No watermark."
+  },
+  {
+    "name": "services-hero",
+    "ref": "services",
+    "prompt": "Use case: photorealistic-natural. Input image is composition and style reference screenshot, NOT output layout. Recreate closely ONLY top hero background scene: luxury glass conference room, six professionals meeting around table on right, circular ceiling lighting, bright city windows, plants and illuminated cyan blue ribbon N wall logo with physical Noveltech sign far right. Left 40 percent dark navy negative space. Output a clean standalone high-resolution image asset, not a webpage screenshot. Wide landscape 16:9, navy/cyan palette, premium photorealistic detail. Remove all overlay words, headlines, navigation, buttons, cards, icons, captions, and website UI. Do not include any page sections or borders. Retain only specifically requested physical brand signage. No watermark."
+  },
+  {
+    "name": "career-hero",
+    "ref": "career",
+    "prompt": "Use case: photorealistic-natural. Input image is composition and style reference screenshot, NOT output layout. Recreate closely ONLY top hero background scene: four young adult colleagues, two men and two women, collaborating around wood table with laptops right, luxurious glass office navy walls, plants and illuminated cyan blue ribbon N with physical Noveltech sign right wall. Left 40 percent dark navy negative space. Output a clean standalone high-resolution image asset, not a webpage screenshot. Wide landscape 16:9, navy/cyan palette, premium photorealistic detail. Remove all overlay words, headlines, navigation, buttons, cards, icons, captions, and website UI. Do not include any page sections or borders. Retain only specifically requested physical brand signage. No watermark."
+  },
+  {
+    "name": "contact-hero",
+    "ref": "contact",
+    "prompt": "Use case: photorealistic-natural. Input image is composition and style reference screenshot, NOT output layout. Recreate closely ONLY top hero background scene: luxurious modern glass office reception with rectangular white marble counter on right, cyan glowing N wall logo and physical Noveltech white sign behind counter, leafy plants, staff beyond glass left. Left 40 percent dark navy negative space. Output a clean standalone high-resolution image asset, not a webpage screenshot. Wide landscape 16:9, navy/cyan palette, premium photorealistic detail. Remove all overlay words, headlines, navigation, buttons, cards, icons, captions, and website UI. Do not include any page sections or borders. Retain only specifically requested physical brand signage. No watermark."
+  },
+  {
+    "name": "web-hero",
+    "ref": "web",
+    "prompt": "Use case: photorealistic-natural. Input image is composition and style reference screenshot, NOT output layout. Recreate closely ONLY top hero background scene: aluminum desktop monitor and laptop on elegant wooden desk right, keyboard and mouse, black ceramic mug right, green plant behind. Navy room with soft cool daylight. Screens show generic attractive white blue website dashboard interfaces. Left 40 percent dark navy negative space. Output a clean standalone high-resolution image asset, not a webpage screenshot. Wide landscape 16:9, navy/cyan palette, premium photorealistic detail. Remove all overlay words, headlines, navigation, buttons, cards, icons, captions, and website UI. Do not include any page sections or borders. Retain only specifically requested physical brand signage. No watermark."
+  },
+  {
+    "name": "values",
+    "ref": "about",
+    "prompt": "Use case: photorealistic-natural. Input image is composition and style reference screenshot, NOT output layout. Recreate closely ONLY the values section background photo, three mountaineers helping each other climb a rocky mountain ridge on right at golden sunrise, backlit silhouettes with packs, dramatic navy sky left and sun rays right. Leave left third empty navy sky. Output a clean standalone high-resolution image asset, not a webpage screenshot. Wide landscape 16:9, navy/cyan palette, premium photorealistic detail. Remove all overlay words, headlines, navigation, buttons, cards, icons, captions, and website UI. Do not include any page sections or borders. Retain only specifically requested physical brand signage. No watermark."
+  },
+  {
+    "name": "sydney",
+    "ref": "about",
+    "prompt": "Use case: photorealistic-natural. Input image is composition and style reference screenshot, NOT output layout. Recreate closely ONLY Sydney harbour photo from story section: iconic Sydney Opera House foreground harbour, city skyscrapers behind, beautiful blue sky and warm sunset illumination, crisp photorealistic architectural travel photograph. Full bleed landscape. Output a clean standalone high-resolution image asset, not a webpage screenshot. Wide landscape 16:9, navy/cyan palette, premium photorealistic detail. Remove all overlay words, headlines, navigation, buttons, cards, icons, captions, and website UI. Do not include any page sections or borders. Retain only specifically requested physical brand signage. No watermark."
+  },
+  {
+    "name": "building",
+    "ref": "services",
+    "prompt": "Use case: photorealistic-natural. Input image is composition and style reference screenshot, NOT output layout. Recreate closely ONLY architectural image at lower right trusted partner section: angular blue glass corporate building from dramatic low angle, tree greenery foreground, blue sky and white clouds. Clean architectural photograph, no signs or words. Output a clean standalone high-resolution image asset, not a webpage screenshot. Wide landscape 16:9, navy/cyan palette, premium photorealistic detail. Remove all overlay words, headlines, navigation, buttons, cards, icons, captions, and website UI. Do not include any page sections or borders. Retain only specifically requested physical brand signage. No watermark."
+  },
+  {
+    "name": "mobile",
+    "ref": "web",
+    "prompt": "Use case: photorealistic-natural. Input image is composition and style reference screenshot, NOT output layout. Create a matching premium dark navy workspace photograph with two modern smartphones showing crisp polished mobile app cards, blue cyan chart screens, a laptop behind them, wooden desk, soft cool lighting, background plant. Subject to right, wide landscape. Output a clean standalone high-resolution image asset, not a webpage screenshot. Wide landscape 16:9, navy/cyan palette, premium photorealistic detail. Remove all overlay words, headlines, navigation, buttons, cards, icons, captions, and website UI. Do not include any page sections or borders. Retain only specifically requested physical brand signage. No watermark."
+  },
+  {
+    "name": "design",
+    "ref": "web",
+    "prompt": "Use case: photorealistic-natural. Input image is composition and style reference screenshot, NOT output layout. Create a matching premium dark navy creative design studio workspace photograph, large screen showing colorful graphic design artboards and polished interface designs, tablet and stylus on wooden desk, soft blue cyan light, plant. Subject right, wide landscape. Output a clean standalone high-resolution image asset, not a webpage screenshot. Wide landscape 16:9, navy/cyan palette, premium photorealistic detail. Remove all overlay words, headlines, navigation, buttons, cards, icons, captions, and website UI. Do not include any page sections or borders. Retain only specifically requested physical brand signage. No watermark."
+  },
+  {
+    "name": "ecommerce",
+    "ref": "web",
+    "prompt": "Use case: photorealistic-natural. Input image is composition and style reference screenshot, NOT output layout. Recreate closely ONLY the ecommerce card photograph: open premium aluminum laptop on wood desk, screen showing elegant online shop with grid of product cards, plants behind, bluegray office interior natural daylight, full bleed wide landscape photograph. Output a clean standalone high-resolution image asset, not a webpage screenshot. Wide landscape 16:9, navy/cyan palette, premium photorealistic detail. Remove all overlay words, headlines, navigation, buttons, cards, icons, captions, and website UI. Do not include any page sections or borders. Retain only specifically requested physical brand signage. No watermark."
+  },
+  {
+    "name": "marketing",
+    "ref": "web",
+    "prompt": "Use case: photorealistic-natural. Input image is composition and style reference screenshot, NOT output layout. Create a matching premium dark navy office photograph with desktop and laptop screens showing refined email campaign and analytics dashboards, blue cyan charts and cards, wood desk, soft daylight, plant, subject right, wide landscape. Output a clean standalone high-resolution image asset, not a webpage screenshot. Wide landscape 16:9, navy/cyan palette, premium photorealistic detail. Remove all overlay words, headlines, navigation, buttons, cards, icons, captions, and website UI. Do not include any page sections or borders. Retain only specifically requested physical brand signage. No watermark."
+  },
+  {
+    "name": "backup",
+    "ref": "services",
+    "prompt": "Use case: photorealistic-natural. Input image is composition and style reference screenshot, NOT output layout. Create premium realistic server room photograph matching reference navy cyan style, symmetrical aisle of sleek black server cabinets with cyan indicator lights and blue overhead lighting, crisp technological infrastructure, wide landscape. Output a clean standalone high-resolution image asset, not a webpage screenshot. Wide landscape 16:9, navy/cyan palette, premium photorealistic detail. Remove all overlay words, headlines, navigation, buttons, cards, icons, captions, and website UI. Do not include any page sections or borders. Retain only specifically requested physical brand signage. No watermark."
+  },
+  {
+    "name": "logo",
+    "ref": "home",
+    "prompt": "Use case: logo-brand. Input image is composition and style reference screenshot, NOT output layout. Recreate closely ONLY the small ribbon N logo from top left, standalone on genuinely transparent background with alpha. Smooth curved ribbon N, cyan turquoise and electric blue gradients, tiny ascending cyan square pixels at top right of N. No wordmark, no text, no tagline. Centered, square asset. Output a clean standalone high-resolution image asset, not a webpage screenshot. Remove all overlay words, headlines, navigation, buttons, cards, icons, captions, and website UI. Do not include any page sections or borders. Retain only specifically requested physical brand signage. No watermark."
+  }
+]

@@ -1,0 +1,7 @@
+import { ArrowRight, ArrowUp, ArrowLeft, Code2, Smartphone, Palette, ShoppingCart, Search, Mail, Database, BriefcaseBusiness, Users, Lightbulb, ShieldCheck, ChartNoAxesCombined, Building2, Megaphone, GraduationCap, Heart, Ellipsis, Monitor, Headphones, Cloud, MapPin, Phone, Clock, Check, CheckCheck, Compass, FileText, PencilRuler, Rocket, Settings, Globe, LockKeyhole, Calendar, Upload, Menu, X, ChevronDown, Play, Target, Handshake, Star } from 'lucide-react';
+const icons = { arrow: ArrowRight, up: ArrowUp, left: ArrowLeft, code: Code2, phone: Smartphone, palette: Palette, cart: ShoppingCart, search: Search, mail: Mail, database: Database, briefcase: BriefcaseBusiness, users: Users, bulb: Lightbulb, shield: ShieldCheck, chart: ChartNoAxesCombined, building: Building2, megaphone: Megaphone, graduation: GraduationCap, heart: Heart, more: Ellipsis, monitor: Monitor, headphones: Headphones, cloud: Cloud, pin: MapPin, call: Phone, clock: Clock, check: Check, checks: CheckCheck, compass: Compass, file: FileText, design: PencilRuler, rocket: Rocket, settings: Settings, globe: Globe, lock: LockKeyhole, calendar: Calendar, upload: Upload, menu: Menu, close: X, down: ChevronDown, play: Play, target: Target, handshake: Handshake, star: Star };
+export default function Icon({ name, size = 24, className = '' }: {
+    name: string;
+    size?: number;
+    className?: string;
+}) { const C = icons[name as keyof typeof icons] || Code2; return <C size={size} className={className} aria-hidden="true" strokeWidth={1.8}/>; }

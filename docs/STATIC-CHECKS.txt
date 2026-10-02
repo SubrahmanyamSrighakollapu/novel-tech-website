@@ -1,0 +1,2 @@
+PASS 13 exported pages: unique titles/descriptions, one H1, canonical URLs, JSON-LD, internal links, local anchors, image paths/alt attributes, sitemap and default noindex/robots rules.
+PASS static preview HTTP: 13 routes, 15 images, sitemap, robots, favicon and unknown-route 404.

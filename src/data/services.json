@@ -1,0 +1,394 @@
+[
+  {
+    "slug": "web-development",
+    "title": "Web Development",
+    "icon": "code",
+    "image": "web-hero",
+    "headline": [
+      "Modern Websites",
+      "for a Stronger",
+      "Tomorrow"
+    ],
+    "intro": "We build high-performance, secure and scalable websites that help businesses grow, engage customers and create meaningful digital experiences.",
+    "value": "Web Development That Delivers",
+    "accent": "Real Value",
+    "summary": "We combine strategy, design and technology to build websites that are visually engaging, user-friendly and results-driven.",
+    "offers": [
+      {
+        "title": "Business Websites",
+        "text": "Professional websites that tell your story and help customers take the next step.",
+        "image": "web-hero",
+        "detail": "Clear navigation, thoughtfully written pages and flexible layouts help your business make a confident first impression."
+      },
+      {
+        "title": "E-Commerce Websites",
+        "text": "Online stores that make browsing and buying feel effortless.",
+        "image": "ecommerce",
+        "detail": "From product discovery to checkout, we plan the shopping journey around your catalogue, customers and operational needs."
+      },
+      {
+        "title": "Web Applications",
+        "text": "Scalable applications tailored to your business workflows.",
+        "image": "design",
+        "detail": "Bring important tasks together with purposeful interfaces, role-based experiences and integrations designed for your team."
+      },
+      {
+        "title": "CMS Development",
+        "text": "Manage your website content with confidence.",
+        "image": "web-hero",
+        "detail": "Publish pages, edit information and maintain your content through a structured, easy-to-manage content system."
+      }
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Node.js",
+      "PHP",
+      "MySQL",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "slug": "mobile-application-development",
+    "title": "Mobile Application Development",
+    "icon": "phone",
+    "image": "mobile",
+    "headline": [
+      "Mobile Experiences",
+      "Built Around",
+      "Your People"
+    ],
+    "intro": "Bring your ideas to life with intuitive mobile applications that connect people, simplify daily tasks and support your business.",
+    "value": "Mobile Applications That Make",
+    "accent": "Every Tap Count",
+    "summary": "From the first wireframe to release, we focus on clear interactions, reliable performance and a consistent experience.",
+    "offers": [
+      {
+        "title": "iOS Applications",
+        "text": "Thoughtful experiences for iPhone and iPad.",
+        "image": "mobile",
+        "detail": "We plan intuitive navigation, accessible controls and device-aware layouts around the needs of your Apple users."
+      },
+      {
+        "title": "Android Applications",
+        "text": "Reach customers across a broad range of Android devices.",
+        "image": "mobile",
+        "detail": "Responsive layouts, efficient data handling and careful testing support a dependable experience across screen sizes."
+      },
+      {
+        "title": "Cross-Platform Apps",
+        "text": "A consistent product experience across platforms.",
+        "image": "design",
+        "detail": "Share a clear product vision across iOS and Android while balancing delivery speed, maintainability and native capabilities."
+      },
+      {
+        "title": "App Support & Evolution",
+        "text": "Keep your application useful as your business grows.",
+        "image": "web-hero",
+        "detail": "Plan updates, resolve issues and improve journeys using customer feedback and agreed product priorities."
+      }
+    ],
+    "technologies": [
+      "React Native",
+      "Flutter",
+      "Swift",
+      "Kotlin",
+      "Firebase",
+      "REST APIs"
+    ]
+  },
+  {
+    "slug": "web-graphic-design",
+    "title": "Web & Graphic Design",
+    "icon": "palette",
+    "image": "design",
+    "headline": [
+      "Distinctive Design.",
+      "Meaningful",
+      "Connections."
+    ],
+    "intro": "Build a memorable brand with digital experiences and visual communication that feel clear, consistent and unmistakably yours.",
+    "value": "Design That Brings Your",
+    "accent": "Brand to Life",
+    "summary": "We connect visual identity with usability so your brand looks good and works beautifully wherever people meet it.",
+    "offers": [
+      {
+        "title": "Website & UI Design",
+        "text": "Purposeful layouts for seamless digital journeys.",
+        "image": "design",
+        "detail": "Wireframes, high-fidelity designs and interaction patterns bring clarity to your website before development begins."
+      },
+      {
+        "title": "Brand Identity",
+        "text": "A visual language that represents your business.",
+        "image": "building",
+        "detail": "Create a coherent identity with logo direction, colour, typography and guidance for consistent use."
+      },
+      {
+        "title": "Graphic Design",
+        "text": "Clear, compelling communication across formats.",
+        "image": "marketing",
+        "detail": "Bring your message to presentations, brochures, campaigns and social graphics with considered hierarchy and detail."
+      },
+      {
+        "title": "UX Research & Prototyping",
+        "text": "Understand your users before committing to a build.",
+        "image": "mobile",
+        "detail": "Explore real tasks, map friction points and test prototypes so decisions are grounded in user needs."
+      }
+    ],
+    "technologies": [
+      "Figma",
+      "Adobe Illustrator",
+      "Photoshop",
+      "InDesign",
+      "Prototyping",
+      "Design Systems"
+    ]
+  },
+  {
+    "slug": "e-commerce",
+    "title": "E-Commerce",
+    "icon": "cart",
+    "image": "ecommerce",
+    "headline": [
+      "Better Shopping.",
+      "Stronger",
+      "Businesses."
+    ],
+    "intro": "Create an online store that makes it easy for customers to discover your products, choose with confidence and complete their purchase.",
+    "value": "Commerce Experiences Built",
+    "accent": "Around Your Customers",
+    "summary": "We connect engaging storefront design with practical catalogue, checkout and fulfilment requirements.",
+    "offers": [
+      {
+        "title": "Online Store Development",
+        "text": "A storefront built for your products and audience.",
+        "image": "ecommerce",
+        "detail": "Plan product pages, collections and navigation that help customers find the right items quickly."
+      },
+      {
+        "title": "Payments & Checkout",
+        "text": "Reduce friction at the most important step.",
+        "image": "mobile",
+        "detail": "Integrate suitable payment providers and design a clear checkout journey with useful validation and transparent costs."
+      },
+      {
+        "title": "Catalogue & Integrations",
+        "text": "Keep the essential parts of your store connected.",
+        "image": "web-hero",
+        "detail": "Connect inventory, customer records and business tools where supported by your platforms and integration scope."
+      },
+      {
+        "title": "Store Optimisation",
+        "text": "Keep improving the shopping experience.",
+        "image": "marketing",
+        "detail": "Review usability, performance and analytics to prioritise changes that make shopping simpler."
+      }
+    ],
+    "technologies": [
+      "Shopify",
+      "WooCommerce",
+      "Next.js",
+      "Stripe",
+      "REST APIs",
+      "Analytics"
+    ]
+  },
+  {
+    "slug": "seo",
+    "title": "SEO",
+    "icon": "search",
+    "image": "marketing",
+    "headline": [
+      "Get Found.",
+      "Build Visibility.",
+      "Grow Organically."
+    ],
+    "intro": "Help the right people discover your business through technically sound websites, useful content and a focused search strategy.",
+    "value": "Search Optimisation With",
+    "accent": "A Clear Direction",
+    "summary": "We build a practical plan around how your customers search and the information they need to make decisions.",
+    "offers": [
+      {
+        "title": "Technical SEO",
+        "text": "Build a strong foundation for search visibility.",
+        "image": "web-hero",
+        "detail": "Review crawlability, indexing, page structure, internal linking and performance to identify technical barriers."
+      },
+      {
+        "title": "On-Page Optimisation",
+        "text": "Make every important page clearer and more relevant.",
+        "image": "design",
+        "detail": "Align titles, descriptions, headings and content with the intent behind your customers\u2019 searches."
+      },
+      {
+        "title": "Local Search",
+        "text": "Help nearby customers understand your business.",
+        "image": "sydney",
+        "detail": "Improve consistency in location information and develop useful local pages without promising ranking positions."
+      },
+      {
+        "title": "Content & Reporting",
+        "text": "Turn research into useful content and measurable learning.",
+        "image": "marketing",
+        "detail": "Develop a content plan and review meaningful indicators over time. Search results depend on competition and many external factors."
+      }
+    ],
+    "technologies": [
+      "Search Console",
+      "Analytics",
+      "Structured Data",
+      "Lighthouse",
+      "Sitemaps",
+      "Content Strategy"
+    ]
+  },
+  {
+    "slug": "email-marketing",
+    "title": "Email Marketing",
+    "icon": "mail",
+    "image": "marketing",
+    "headline": [
+      "Better Messages.",
+      "Lasting",
+      "Relationships."
+    ],
+    "intro": "Connect with your audience through thoughtful email campaigns that are useful, timely and consistent with your brand.",
+    "value": "Email Marketing That Feels",
+    "accent": "More Personal",
+    "summary": "From campaign planning to measurement, we help you communicate with people who want to hear from your business.",
+    "offers": [
+      {
+        "title": "Campaign Strategy",
+        "text": "Give every campaign a clear purpose.",
+        "image": "marketing",
+        "detail": "Define the audience, message, timing and action so your emails support specific business goals."
+      },
+      {
+        "title": "Email Design",
+        "text": "Responsive templates built for readability.",
+        "image": "design",
+        "detail": "Design accessible email layouts with clear hierarchy, practical mobile behaviour and recognisable branding."
+      },
+      {
+        "title": "Automation & Segmentation",
+        "text": "Make communications more relevant.",
+        "image": "mobile",
+        "detail": "Plan consent-based welcome journeys and audience segments using information your subscribers have chosen to share."
+      },
+      {
+        "title": "Testing & Reporting",
+        "text": "Learn from each campaign.",
+        "image": "web-hero",
+        "detail": "Review delivery, engagement and conversion signals, and maintain unsubscribe handling and list hygiene."
+      }
+    ],
+    "technologies": [
+      "Mailchimp",
+      "Brevo",
+      "HubSpot",
+      "HTML Email",
+      "Automation",
+      "Analytics"
+    ]
+  },
+  {
+    "slug": "data-backup-recovery",
+    "title": "Data Backup & Recovery",
+    "icon": "database",
+    "image": "backup",
+    "headline": [
+      "Protect Your Data.",
+      "Prepare for",
+      "What\u2019s Next."
+    ],
+    "intro": "Keep essential business information recoverable with a considered backup strategy, documented processes and regular recovery testing.",
+    "value": "Business Resilience Starts",
+    "accent": "With Your Data",
+    "summary": "We help you understand what needs protection, how long you can be without it and what a realistic recovery plan requires.",
+    "offers": [
+      {
+        "title": "Backup Assessment",
+        "text": "Know what matters and where it lives.",
+        "image": "backup",
+        "detail": "Review critical systems, data locations and existing coverage to identify practical gaps and priorities."
+      },
+      {
+        "title": "Cloud & Local Backup",
+        "text": "Match the approach to your operational needs.",
+        "image": "web-hero",
+        "detail": "Plan a combination of backup locations, retention policies and access controls appropriate to the agreed scope."
+      },
+      {
+        "title": "Recovery Planning",
+        "text": "Make the next steps clear before an incident.",
+        "image": "services-hero",
+        "detail": "Document responsibilities, recovery objectives and restoration steps so your team can respond with greater clarity."
+      },
+      {
+        "title": "Restore Testing & Monitoring",
+        "text": "Check that your backups can do their job.",
+        "image": "backup",
+        "detail": "Test recovery procedures and review alerts. Recovery outcomes depend on configuration, data condition and the agreed service scope."
+      }
+    ],
+    "technologies": [
+      "Microsoft Azure",
+      "AWS",
+      "Veeam",
+      "Cloud Storage",
+      "Encryption",
+      "Recovery Testing"
+    ]
+  },
+  {
+    "slug": "consulting-services",
+    "title": "Consulting Services",
+    "icon": "briefcase",
+    "image": "services-hero",
+    "headline": [
+      "Clear Thinking.",
+      "Better Technology.",
+      "Real Progress."
+    ],
+    "intro": "Make informed technology decisions with practical advice that connects your business priorities, people and systems.",
+    "value": "Technology Advice Focused",
+    "accent": "On Your Business",
+    "summary": "We listen first, ask useful questions and help you turn a complex set of options into an actionable plan.",
+    "offers": [
+      {
+        "title": "Technology Strategy",
+        "text": "A roadmap shaped around your business goals.",
+        "image": "services-hero",
+        "detail": "Assess your current systems, identify priorities and sequence improvements around value, dependencies and resources."
+      },
+      {
+        "title": "Digital Transformation",
+        "text": "Improve the way your business works.",
+        "image": "career-hero",
+        "detail": "Explore where better tools and simpler processes can support your team and customer experience."
+      },
+      {
+        "title": "Systems & Architecture",
+        "text": "Make choices that support long-term maintainability.",
+        "image": "backup",
+        "detail": "Review integration needs, data flows and platform options with attention to security, cost and operational fit."
+      },
+      {
+        "title": "Project Advisory",
+        "text": "Clarity from discovery through delivery.",
+        "image": "about-hero",
+        "detail": "Support scoping, supplier evaluation and delivery reviews so stakeholders can make informed decisions at each stage."
+      }
+    ],
+    "technologies": [
+      "Discovery",
+      "Roadmaps",
+      "Architecture",
+      "Cloud Strategy",
+      "Risk Review",
+      "Delivery Planning"
+    ]
+  }
+]
