@@ -131,7 +131,7 @@ export default function ScrollObserver() {
             const parent = element.parentElement;
             if (parent && [...STAGGERED_PARENT_CLASSES].some((name) => parent.classList.contains(name))) {
                 const siblingIndex = Array.from(parent.children).indexOf(element);
-                element.style.setProperty('--stagger-delay', `${Math.min(siblingIndex, 5) * 70}ms`);
+                element.style.setProperty('--stagger-delay', `${Math.min(siblingIndex, 5) * 110}ms`);
             }
 
             const rect = element.getBoundingClientRect();
